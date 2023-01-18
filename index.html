@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getusermedia</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    
+    <!-- Encabezado -->
+    <header>
+   <!-- logo -->
+    <section id="logo">
+
+         <img src="Imágenes/logo.png" heigth="70" width="70"> 
+
+    </section>
+
+      <!-- redes -->
+      <section id="redes">
+
+        <a href="https://www.youtube.com/channel/UC6qf8LTMWFVmPRDCWDwet7Q"><img src="Imágenes/youtube.png" height="70" width="70"></a>
+        <a href="https://www.facebook.com/profile.php?id=100013174746152"><img src="Imágenes/facebook.png" height="70" width="70"></a>
+        <a href="https://chat.whatsapp.com/K"><img src="Imágenes/wp.png" height="70" width="70"></a>
+
+      </section>
+    </header>
+
+    <!-- Menús -->
+    <nav >
+        <ul>
+           <li><a href="#">INICIO</a></li> 
+           <li><a href="https://www.youtube.com/watch?v=Hc7GE3ENz7k">VIDEOS</a></li> 
+           <li><a href="https://www.facebook.com/Espoch.edu.ec/">QUIENES SOMOS</a></li> 
+           <li><a href="https://liveespochedu-my.sharepoint.com/:w:/g/personal/jonathan_cujilema_espoch_edu_ec/Eahu7yaZwYpCuaKBMSCVFA4B6J9dbzRpYZjSGpw1oeKFUA?e=0vl3Ig">AYUDA</a></li> 
+          
+
+        </ul>
+    </nav>
+    <!-- Efecto de imagen -->
+    <div id="banner-slider">
+
+        <ul>
+            <li><img src="banner/1.png" ></li>
+            <li><img src="banner/2.jpg" ></li>
+            <li><img src="banner/3.jpg" ></li>
+        </ul>
+
+    </div>
+
+    <!-- Tarjetas con movimiento -->
+    <div id="General_Tarjeta">
+
+		<section class="Tarjeta">
+			<img src="Imágenes/logo.png">
+			<h2>Definición</h2>
+			<p>
+				Es un  código abierto que permite capacidades de comunicación de voz, texto y video en tiempo real.
+			</p>
+			<a href="https://www.techtarget.com/searchunifiedcommunications/definition/WebRTC-Web-Real-Time-Communications">Leer Más</a>
+
+		</section>
+		<section class="Tarjeta">
+			<img src="tarjetas/Get.jpg">
+			<h2>Función</h2>
+			<p>
+				Solicita  permisos al dispositivo de entrada de vídeo y/o uno de audio o compartir la pantalla de video.
+			</p>
+			<a href="https://developer.mozilla.org/es/docs/Web/API/MediaDevices/getUserMedia#:~:text=getUserMedia()%20solicita%20al%20usuario,el%20resultado%20del%20objeto%20MediaStream%20.">Leer Más</a>
+		</section>
+		<section class="Tarjeta">
+			<img src="tarjetas/3.jpg">
+			<h2>Compatibilidad</h2>
+			<p>
+                Se encuentra soportado  por Google Chrome, Mozilla Firefox o otros que  esten basados Chromium.
+            </p>  
+			<a href="https://www.3cx.es/voip-sip/que-es-webrtc/#:~:text=WebRTC%20se%20encuentra%20soportado%20actualmente,de%20escritorio%20como%20de%20app.">Leer Más</a>
+		</section>
+	</div>
+
+    
+    <!-- Información -->
+    <main>
+
+        
+        <div  class="Video"> 
+            <video src=""autoplay='true'></video>
+         </div>
+        
+        
+        <script>
+        let myvideo =document.querySelector('video')
+        if(navigator.mediaDevices){
+            navigator.mediaDevices.getUserMedia({video:true})
+
+            .then(function(s){
+                myvideo.srcObject = s;
+            })
+        }  else{
+            
+        }
+        </script>
+        <script src="getusermedia.js"></script>
+        
+
+
+
+    </main>
+    <!-- pie de página -->
+    <footer>
+
+        <div id="Columna_General">
+            <section id="columna1">
+                <H2>Más Información</H2>
+                <p>
+                    Nunca dejes de aprender.
+                </p>
+                <p>
+                   Conocimiento es Poder.
+                </p>
+            </section>
+            <section id="columna2">
+                 <h2>Redes Sociales</h2>
+                  <img src="Imágenes/facebook.png">
+                  <label>Facebook</label>
+                  <img src="Imágenes/wp.png">
+                  <label>Whatsapp</label>
+                  
+
+                </section>
+            <section id="columna3">
+
+            <h2>Información de Contacto</h2>
+        
+            <img src="img/3.png">
+            <label>Email:jcujilema22@gmail.com</label>
+            <label>Localidad:Cumandá barrio la Dolorosa.</label>
+            <label>Cell:0985121572.</label> 
+           
+
+        </section>
+        </div>
+
+    </footer>
+
+    <div id="footer2">
+
+        <p>Copyringth 2023     |        Derechos Reservados      |          Cujilema6685</p>
+
+
+
+    </div>
+    
+</body>
+</html>
